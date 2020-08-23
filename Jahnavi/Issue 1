@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+File*fptr;
+char ch;
+fptr=fopen("test. txt","r");
+if(fptr==null)
+{
+printf("unable to open the file please check the name of the file entered. \n");
+Exit(exit_failure);
+}
+do
+{
+ch=fgetc(fptr);
+putchar(ch);
+}
+while(ch!=EOF);
+fclose(fptr);
+return 0;
+}
