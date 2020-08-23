@@ -1,0 +1,92 @@
+#include<stdio.h>
+#include<conio.h>
+
+void OE();
+void prime();
+void fact();
+
+void main()
+{
+	int ch,a;
+	clrscr();
+
+	printf("1.Odd or even\n");
+	printf("2.Prime or not\n");
+	printf("3.Factorial\n");
+	printf("4.Exit\n");
+
+	printf("\nEnter your choice\n");
+	scanf("%d",&ch);
+
+	switch(ch)
+	{
+	case 1:
+		OE();
+		break;
+
+	case 2:
+		prime();
+		break;
+
+	case 3:
+		fact();
+		break;
+
+	case 4:
+		printf("exit");
+		printf("Thank You  ");
+		exit();
+		break;
+	}
+	getch();
+}
+
+void OE()
+{
+	int no;
+	printf("enter the number");
+	scanf("%d",&no);
+
+	if((no%2)==0)
+	{
+		printf("number is even");
+	}
+	else
+	{
+		printf("number is odd");
+	}
+}
+
+void prime()
+{
+	int p=0,i,n;
+
+	printf("enter the number");
+	scanf("%d",&n);
+
+	for(i=2;i<=n/2;i++)
+	{
+		if(n%i==0)
+		{
+			p=1;
+			break;
+		}
+	}
+
+	if(p==0)
+		printf(" The number is prime");
+	else
+		printf("The number is not prime");
+}
+
+void fact()
+{
+	int fact=1,i,n;
+printf("enter the number");
+scanf("%d", &n);
+	for(i=1;i<=n;i++)
+	{
+		fact=fact*i;
+	}
+	printf("Factorial=%d",fact);
+}
